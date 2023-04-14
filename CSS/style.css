@@ -1,0 +1,324 @@
+:root{
+    --Desaturated-Red:hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --Linear-01: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Linear-02: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background: linear-gradient(100deg,  hsla(0, 0%, 98%, 0.358),  hsla(0, 100%, 92%, 0.495));
+
+}
+.html-sucess{
+    transition:  .3s ease-in-out;
+    background: linear-gradient(50deg,  hsl(274, 7%, 37%),  hsla(304, 39%, 44%, 0.939));
+    background-size: 300%, 300%;
+    animation: color 10s ease-in-out infinite;
+
+}
+@keyframes color {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Josefin Sans";
+    background-image: url(/images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    
+    
+}
+
+.container{
+    width: 63.7%;
+    height: 100vh;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-position: bottom;
+    
+    
+
+   
+ 
+}
+.logo{
+    margin: 50px 0 0 130px;
+
+}
+h1{
+    width: 500px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 4em;
+    font-weight: 400;
+    margin: 70px 0 0 130px;
+   
+}
+h1 span{
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.pont{
+    position: relative;
+    bottom: -1px;
+}
+p{
+    width:450px;
+    margin: 0px 0 0 130px;
+    line-height: 2.1;
+    color: var(--Desaturated-Red);
+}
+#go-email{
+    display: flex;
+    margin: 30px 0 0 130px;
+}
+input{
+    width: 370px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid hsl(0, 36%, 70%);
+    padding-left: 30px;
+    background-color: transparent;   
+    position: absolute;
+}
+input:focus{
+    outline: none;
+    border: 2px solid rgb(185, 246, 94);
+}
+.focus{
+    border: 2px solid var(--Soft-Red);
+}
+.sucess{
+    border: 2px solid rgb(185, 246, 94);
+  
+}
+.error{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 200px;
+    top: 10px;
+    display: none;
+    
+}
+
+input::placeholder{
+    color: var(--Desaturated-Red);
+}
+
+button{
+    width: 90px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    margin-left: -50px;
+    cursor: pointer;
+    background: linear-gradient( 135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    box-shadow: 1px 10px 15px hsla(0, 36%, 70%, 0.77);
+    transition:  .6s ease-in-out;
+    position: relative;
+    left: 350px;
+}
+button:hover{
+    background: linear-gradient( 135deg, hsl(0, 100%, 94%),   hsl(0, 89%, 82%));
+    
+}
+
+.text-error{
+    color: var(--Soft-Red);
+    margin: 0px 0 0 160px;
+    
+}
+.text-sucess{
+    color: rgb(185, 246, 94);
+    margin: 5px 0 0 160px;
+    text-shadow: 1px 1px 5px black;
+}
+.img2{
+  display: none;
+
+}
+
+@media screen and (max-width: 1005px) {
+    html{
+        background: none;
+    }
+   
+    body{
+        width: 100%;
+        height: 700px;
+        background-image: none;
+        background-repeat: none;
+        background-position: none;
+        background-size: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 0%, 100%);
+      
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: none;
+        background-position: none;
+    }
+    .one{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .logo{
+       margin: 0px auto; 
+    }
+
+    p{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    h1{
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;   
+    }
+    .img2{
+        display: block;
+        margin-top: 30px;
+      
+    }
+    .text-error{
+        margin: 20px auto;
+        color: var(--Soft-Red);
+        
+    }
+    .text-sucess{
+        color: rgb(185, 246, 94);
+        margin: 5px 0 0 -160px;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    #go-email{
+        width: 370px;
+        margin: 0 auto;
+
+    }
+    input{
+       width: 370px;
+        
+    }
+   
+    
+}
+
+@media  screen and (max-width: 630px) {
+    html{
+        background: none;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 800px;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+   .one{
+    width: 100%;
+    height: 900px;
+   }
+ 
+    #go-email{
+        width: 370px;
+        margin: 0 auto;
+
+    }
+    input{
+       width: 370px;
+        
+    }
+    .text-error{
+        width: 100%;
+        color: var(--Soft-Red);
+        margin: 20px 0 0 -30px;
+
+    }
+    .img2 img{
+        width: 100%;
+        
+    }
+    .text-sucess{
+        color: rgb(185, 246, 94);
+        margin: 5px 0 0 -30px;
+        text-shadow: 1px 1px 2px black;
+    }
+    h1{
+        font-size: 3em;
+    }
+    .logo{
+      margin: 0 0 0 -200px;
+    }
+ 
+   
+}
+@media screen and (max-width: 430px){
+    .img2 img{
+        width: 100%;
+
+    }
+   .container{
+        height: 100vh;
+   }
+    h1{
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 2em;
+    }
+    p{
+        margin: 20px auto;
+    }
+    .logo{
+        margin: auto;
+    }
+    #go-email{
+        width: 220px;
+    }
+    .error{
+        left: 70px;
+    }
+    button{
+        left: 200px;
+    }
+    input{
+        max-width: 220px;
+        padding-left: 10px;
+    }
+}
